@@ -145,7 +145,7 @@ server <- function(input, output, session) {
       
       #Save CAT design to file when session ended
       session$onSessionEnded(function() {
-        if (exists("CATdesign")) saveRDS(CATdesign, designFile)
+        # if (exists("CATdesign")) saveRDS(CATdesign, designFile)
       })
       
     } else {
