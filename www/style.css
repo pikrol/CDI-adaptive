@@ -1,0 +1,22 @@
+body {
+	text-align: justify;
+	font-family: 'Lato', sans-serif;
+}
+
+h1 {
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.well {
+	text-align: center;
+}
+
+#warning {
+	color: red;
+}
