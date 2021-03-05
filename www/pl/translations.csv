@@ -1,0 +1,14 @@
+text_type;text;test
+cdiNamePrefix;Inwentarz Rozwoju Mowy i Komunikacji;
+cdiNameSufix;wersja adaptatywna;
+sidebarBigTextH3;Witamy w inwentarzu!;
+sidebarInstr;Prosimy wybrać datę narodzin i płeć dziecka, a następnie nacisnąć przycisk „Start”.;
+birthQuestion;Data narodzin dziecka;
+genderQuestion;Płeć dziecka;
+genders;Dziewczynka, Chłopiec, Inna;
+btn;Start;
+noGender;Proszę wybrać płeć dziecka.;
+testInstr;Proszę odpowiedzieć na pytanie.;
+question;Czy Twoje dziecko mówi;
+choiceNames;Nie, Tak;
+thanks;Dziękujemy za wypełnienie inwentarza!;

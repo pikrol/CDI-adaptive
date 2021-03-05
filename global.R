@@ -1,8 +1,7 @@
-#Load libraries
 library(mirtCAT)
 library(shinythemes)
-
-#Needed for correct functioning
+library(tidyverse) #add_row method
+library(lubridate) #dates
 options(stringsAsFactors = FALSE)
 
 #Specify paths
@@ -12,8 +11,19 @@ initPath <- getwd()
 
 #Load functions
 source(paste0(functionsPath,"/readFromURL.R"))
+source(paste0(functionsPath,"/renderDemographicPage.R"))
+source(paste0(functionsPath,"/startTest.R"))
+source(paste0(functionsPath,"/checkStop.R"))
 source(paste0(functionsPath,"/createProgressBar.R"))
-source(paste0(functionsPath,"/renderFirstSessionItem.R"))
 
-#Create folder with designs if it doesn't exist
-ifelse(!dir.exists(file.path(initPath, "designs")), dir.create(file.path(initPath, "designs")), FALSE)
+#Prepare folder with designs
+if (!dir.exists(file.path(initPath, "designs"))) dir.create(file.path(initPath, "designs"))
+
+#Prepare subjects table
+subjectsFile <- "subjects.csv"
+if (!file.exists(subjectsFile)){
+  subjects <<- data.frame(id = "test", birth = NA, gender = NA, test = NA, prevTheta = NA)
+  write.csv(subjects, subjectsFile, row.names = F)
+} else {
+  subjects <<- read.csv(subjectsFile, encoding = "UTF-8")
+}
