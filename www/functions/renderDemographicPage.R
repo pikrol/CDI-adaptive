@@ -19,6 +19,7 @@ renderDemographicPage <- function(input, output, session){
       ),
       
       div(id = "btnDiv", actionButton("btn", label = txt[txt$text_type == "btn", "text"], class = "btn-primary"))
+      #actionButton("btn", label = txt[txt$text_type == "btn", "text"], class = "btn-primary")
       
     )
     
